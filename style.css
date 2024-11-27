@@ -1,0 +1,375 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ede6e6;
+    background: linear-gradient(45deg,  orange,rgb(228, 97, 169));
+    padding: 10px 20px;
+  }
+  
+  .navbar div {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between items inside the div */
+  }
+  
+  .navbar div:first-child {
+    margin-right: 205px; /* Add space between the two divs */
+  }
+  
+  .navbar p,
+  .navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+  
+  .navbar button {
+    background:none;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .navbar button:hover {
+    background-color: orange;
+    transform: scale(1.05);
+  }
+  
+  .navbar a {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+.second-nav {
+    margin-left: 20px; /* Adds some space to the left of the text */
+    margin-right: 10px; /* Adds some space to the left of the text */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 5px 10px;
+}
+.second-nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 8px;
+}
+.second-nav i{
+    color:black;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.second-nav h1 {
+    display: flex;
+    align-items: center; /* Vertically aligns the icon and text */
+    gap: 10px; /* Adds space between the icon and text */
+    text-transform: uppercase; /* Makes "Landing Page" capitalized */
+  }
+  .second-nav h1 i {
+    font-size: 24px; /* Adjust icon size */
+  }
+  .second-nav span {
+    margin-left: 10px; /* Adds some space to the left of the text */
+  }
+  
+
+.home {
+    position: relative;
+    background: url('busines.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 140px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+  
+  .home p,
+  .home h1,
+  .home button {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .home-buttons {
+    position: relative;
+    display: flex;
+    gap: 10px; /* Gap between the buttons */
+  }
+  
+  .home button {
+    position: relative;
+   
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .home button:first-child {
+    background: linear-gradient(45deg,  orange,rgb(228, 97, 169));
+    border: none;
+    z-index: 2; /* Higher z-index to make it overlap */
+    transform: translateX(30px); /* Overlap the second button by 30px */
+  }
+  
+  .home button:last-child {
+    border: 2px solid white;
+    z-index: 1;
+    background:none;
+  }
+  
+  .home button:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  } 
+  .features ul {
+    background: linear-gradient(45deg,  orange,rgb(228, 97, 169));
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute list items evenly */
+  }
+  
+  .features li {
+    display: flex;
+    flex-direction: column; /* Stack the icon + heading on top of description */
+    align-items: center;
+    width: 36%; /* Set width for each item to allow space between */
+    text-align: center; /* Center text */
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center; /* Align icon and heading in the same line */
+    gap: 10px; /* Space between the icon and the heading */
+  }
+  
+  .features i {
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 100px; /* Circle shape */
+    
+  }
+  
+  .features h2 {
+    font-size: 16px;
+    margin: 5px;
+    font-weight: bold;
+  }
+  
+  .features p {
+    font-size: 16px;
+    color: black;
+    margin: 15px; /* Add some margin above description */
+  }
+  
+  
+  
+.about, .services {
+  padding: 0px;
+  text-align: center;
+}
+
+.services ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+
+.services {
+    
+    padding: 20px 0;
+    background-color: #ede6e6;
+    margin: 0 auto; 
+  }
+  
+  .services h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+   
+  }
+  
+  .services ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services li {
+    position: relative;
+    margin: 0 20px;
+  }
+  
+  .services img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0px;
+  }
+  
+  .services button {
+    position: absolute;
+    bottom: -6px; /* Position the button slightly below the image */
+    left: 69%;
+    transform: translateX(-50%);
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1; /* Ensure the button is on top of the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .services button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full white on hover */
+  }
+  
+  .services .icon {
+    background-color: rgba(255, 165, 0, 0.8); /* Orange background for the icons */
+    color: white;
+    padding: 9px;
+    border-radius: 60%; /* Circle shape */
+    font-size: 24px;
+    margin-right: 14px; /* Space between icon and text */
+  }
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .about .text {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .about .text h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .about .text h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #555;
+  }
+  
+  .about .text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .about .text button {
+    background: linear-gradient(45deg,  orange,rgb(228, 97, 169));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .about .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .about .image-container img {
+    width: 90%; /* Adjust image width */
+    max-width: 400px; /* Maximum size for larger screens */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .second-nav a:last-child {
+    background-color: orange;
+    padding: 30px 10px;
+    border-radius: 0px;
+    text-decoration: none;
+   
+   
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .second-nav a:last-child:hover {
+    background-color: darkorange; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  }
+  
+
+@media (max-width: 768px) {
+  .navbar, .second-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features li, .services li {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .text {
+    text-align: center;
+  }
+
+  .about .image-container img {
+    max-width: 80%;
+  }
+}
